@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel ="stylesheet" href ="styles.css">
+    
+    <title>My Portfolio</title>
+</head>
+<body>
+   <div class="page-container">
+    <header>
+      <nav>
+          <ul>
+              
+              <li class="about-container"><a href = "#" class="about-link">About</a>
+                <div class="about-preview">I’m a frontend/game developer with a passion for 3D.</div>
+              </li>
+              <li><a href = "#">Works</a></li>
+              <li class="expertise-container">
+              <a class="expertise-link" href="#">Expertise</a>
+                <div >
+                  <ul class="expertise-dropdown">
+                    <li class="expertise-list">Frontend Development</li>
+                    <li class="expertise-list">Game Development</li>
+                    <li class="expertise-list">3D Modelling</li>
+                    <li class="expertise-list">Lan Testing</li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href = "#" class="contact-link">Contact</a></li>
+
+        </ul>
+      </nav>
+  </header>
+
+  <main class="content">
+      <div class ="centre-page">
+        <h1>Hello, <br> My name is Haleem</h1>
+      </div>
+      <div class="marquee">
+        <div class="marquee-content">
+            <a href="#">Frontend Developer</a> \
+            <a href="#">Game Developer</a> \
+            <a href="#">3D Modeller</a>
+        </div>
+
+        <div aria-hidden="true" class="marquee-content">
+            <a href="#">Frontend Developer</a> \
+            <a href="#">Game Developer</a> \
+            <a href="#">3D Modeller</a>
+        </div>
+    </div>
+  </main>
+
+  <footer id="footer-contactme">
+      <nav>
+        <ul>
+          <!-- GitHub Icon  -->
+          <li>
+            <a href="https://github.com/ubelgame" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+    
+          <!-- Phone Icon  -->
+          <li>
+            <a href="tel:+2347086621892" aria-label="Call me">
+              <i class="fas fa-phone"></i>
+            </a>
+          </li>
+    
+          <!-- Gmail Icon  -->
+          <li>
+            <a href="mailto:haleem.o.sanni@gmail.com" aria-label="Send email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+   </div>
+
+    <!-- contact popup -->
+    <dialog id="contact-me">
+        <h1>Contact me</h1>
+        <form action="https://formspree.io/f/xovdbqya" method="POST"  class="contact-form">
+            <fieldset> 
+                <div class="name-container">
+                    <label for="first-name">First Name: 
+                        <input name="first-name" id="first-name" type="text" class="name" required>
+                    </label>
+                    <label for="last-name">Last Name: 
+                        <input name="last-name" id="last-name" type="text" class="name" required>
+                    </label>
+                </div>
+                <label for="email">Email Address: 
+                    <input name="email" id="email" type="email" required>
+                </label>
+                <label for="message">Message: 
+                    <textarea name="message" id="message" required></textarea>
+                </label>
+                <input type="submit" value="submit">
+            </fieldset>
+        </form>
+    </dialog>
+
+
+    <!-- about me popup -->
+    <dialog id="about-dialog" >
+      <div class="about-fullscreen">
+        <h1>About Me</h1>
+        <p>I’m a frontend/game developer with a passion for 3D.</p>
+
+        <p>Hey there! I'm Haleem, a self-taught creative from Lagos, Nigeria. I'm just beginning my frontend development journey, but my passion for building amazing things goes way back.</p>
+    
+        <p>What got me into this? Anime, games, and the cool 3D worlds that always left me in awe. I’ve always wanted to create my own characters, stories, and experiences — stuff that makes people feel something.</p>
+    
+        <p>Right now, I’m learning JavaScript and exploring Vue, Unity, and Blender. It’s a lot — but I love the challenge. My dream? To model, rig, and animate a fully original 3D character in Blender, use it in Unity, and share the journey on a website I build myself.</p>
+    
+        <p>When I’m not coding or learning, I’m gaming (Genshin, Honkai: Star Rail, ZZZ, Wuthering Waves), shooting hoops, or diving into manga worlds.</p>
+    
+        <p>This is just the start for me — and I’m excited to keep learning and creating.</p>
+
+        <button class="close-about" aria-label="Close About Section">&times;</button>
+      </div>
+    </dialog>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

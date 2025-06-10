@@ -1,0 +1,387 @@
+body {
+    margin: 0;
+    background: #869d88;
+    color: #c9d1d9;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+.content {
+    flex: 1;
+    max-width: 50vw;
+    text-align: center;
+    margin: 20vh auto;
+}
+
+.centre-page h1 {
+    font-size: 100px;
+    cursor: pointer;
+}
+
+.centre-page h1:hover {
+    animation: blinking .5s infinite;
+}
+
+@keyframes blinking {
+    0% { color: #ff7eb3; }
+    50% { color: #ff758c; }  
+    100% { color: #ff7eb3; }
+}
+
+.marquee a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+
+.marquee {
+    overflow: hidden;
+    box-sizing: border-box;
+    user-select: none;
+    display: flex;
+}
+
+.marquee-content{
+    border-left: 25%;
+    border-right: 25%;
+    min-width: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+.marquee:hover .marquee-content{
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+footer{
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+}
+
+header{
+    width: 50vh;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+header ul,footer ul{
+    list-style-type: none;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.about-container{
+    position: relative;
+}
+
+.about-preview{
+    display: none;
+    background-color: #A6B894;
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    width: 25vw;
+    height: auto;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.expertise-container{
+    position: relative;
+}
+
+.expertise-dropdown{
+    display: none;
+    flex-direction: column;
+    background-color: #A6B894;
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    width: 20vw;
+    height: auto;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.expertise-list {            
+    padding: 20px 0;           
+    margin-bottom: 10px;        
+    border-bottom: 1px solid #fff; 
+}
+
+
+.expertise-list:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+footer li a, header li a {
+    text-decoration: none;
+    color: #fff5e1;
+}
+
+
+footer li a:hover, header li a:hover {
+    text-decoration: none;
+    color: #ffe4ae;
+    font-size: 25px;
+}
+
+footer li a.hovering, header li a.hovering {
+    text-decoration: none;
+    color: #ffe4ae;
+    font-size: 25px;
+  }
+  
+
+
+
+
+/* contact me css styling */
+dialog {
+    max-width: 70vw;
+    min-width: 250px;
+    border-radius: 8px;
+    padding: 0px;
+    font-size: 20px;
+}
+
+dialog.opening{
+    animation: growing 0.2s ease-out forwards;
+}
+dialog.closing{
+    animation: closing 0.2s ease-in forwards;
+}
+
+dialog h1 {
+    font-size: 1.8em;
+    margin: 1em auto;
+    text-align: center;
+    padding: 0;
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+dialog form fieldset {
+    border: none;
+    padding: 1rem;
+}
+
+dialog form fieldset label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+
+dialog form fieldset input, dialog form fieldset textarea {
+    width: 100%;
+    margin: 0 0 0.5rem 0;
+    background-color: #869d88;
+    border: 1px solid #869d88;
+    color: #ffffff;
+    height: 2rem;
+    font-size: 1rem;
+}
+
+dialog form fieldset textarea {
+    height: 5rem;
+}
+
+.name-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.name { 
+    width: 100%;
+    max-width: 100%;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 60%;
+    max-width: 250px; 
+    min-width: 120px;
+    margin: auto;
+    background-color: #6b856e;
+    border-color: white;
+    height: 2.5rem;
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;;
+}
+
+
+input[type="submit"]:hover{
+    transform: scale(1.1); /* Slightly larger */
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8)
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    dialog {
+        max-width: 90vw; /* Slightly wider on small screens */
+        font-size: 1rem;
+        padding: 0.3rem;
+    }
+
+    dialog h1 {
+        font-size: 1.5rem;
+        margin: 0.3rem auto;
+    }
+
+    form {
+        max-width: 100%; /* Full width on small screens */
+        padding: 0.3rem;
+    }
+
+    .name-container {
+        flex-direction: column; /* Stack inputs */
+    }
+
+    input[type="submit"] {
+        width: 90%;
+        max-width: 200px;
+    }
+}
+
+
+/* about me fullscreen css styling */
+#about-dialog { 
+  position: relative;
+  max-width: 100vw;
+  width: 100%;
+  height: 90vh;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+@keyframes growing {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes closing {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
+.about-fullscreen{
+    background-color: #6b856e;
+    color:#c9d1d9;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.about-fullscreen.opening{
+     animation: growing 0.2s ease-out forwards;
+}
+
+.about-fullscreen.closing{
+    animation: closing 0.2s ease-in forwards;
+}
+
+
+#about-dialog h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+#about-dialog p {
+  font-size: 1.2rem;
+  max-width: 30vw;
+  text-align: center;
+}
+
+.close-about {
+    position: absolute;
+    top: 0.5rem;
+    right: 1.25rem;
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 10;
+    transform: scale(1);
+    transition: transform 0.1s ease;
+    font-size: 1.5rem;
+
+}
+
+.close-about:hover {
+  background-color:  rgb(255, 99, 99);
+ transform: scale(1.2);
+}
+
+.close-about.click {
+  transform: scale(1.3);
+  background-color:  rgb(252, 118, 118);
+}
+
+@media (max-width: 600px) {
+    .about-fullscreen {
+        padding: 1.5rem 1rem;
+    }
+
+    #about-dialog h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    #about-dialog p {
+        font-size: 1rem;
+        max-width: 90vw;
+        margin-bottom: 1rem;
+    }
+}
