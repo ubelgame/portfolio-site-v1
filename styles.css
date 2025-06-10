@@ -20,6 +20,7 @@ body {
 .centre-page h1 {
     font-size: 100px;
     cursor: pointer;
+    text-shadow: 3px 3px 0 #1a1a1a;
 }
 
 .centre-page h1:hover {
